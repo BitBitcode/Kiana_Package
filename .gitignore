@@ -2,8 +2,8 @@
 # 默认忽略的文件
 
 
-# Pycharm生成的配置文件
+# Pycharm IDE 自动生成的配置文件
 .idea/
 
-# Python包缓存文件
+# Python解释器自动生成的包缓存文件
 __pycache__
