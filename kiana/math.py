@@ -18,7 +18,6 @@
 Copyright (c) BitBitcode. All rights reserved.
 """
 
-
 # 定义一些常量
 PI = 3.1415926  # 【π】圆周率
 E = 2.7182818  # 【e】自然底数
@@ -60,15 +59,18 @@ def bigger(num_1, num_2):
         return num_2
 
 
-def average(n):
-    i = 0
-    num = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+def average(*numbers):
+    """
+    【函数】求平均值
+
+    :param numbers:【可变参数】输入要求的数据，用逗号隔开
+    :return: 返回平均值
+    """
     sum = 0
-    ave = 0
-    while i < n:
-        num[i] = int(input("请依次输入："))
-        sum = sum + num[i]
-        i = i + 1
+    n = 0
+    for num in numbers:
+        sum = sum + num
+        n = n + 1
     ave = sum / n
     return ave
 
@@ -84,3 +86,5 @@ if __name__ == '__main__':
         x = x + 1
 
     print(bigger(5, 3))
+
+    print("【average()函数】平均值为：", average(5, 12, 13))
